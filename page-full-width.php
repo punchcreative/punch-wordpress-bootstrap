@@ -4,7 +4,17 @@ Template Name: Full Width Page
 */
 ?>
 
-<?php get_header(); ?>
+<?php 
+if ( is_home() ) :
+	wpb_header( 'navbar' );
+elseif ( is_front_page() ) :
+	wpb_header( 'home' );
+elseif ( is_404() ) :
+	wpb_header( '404' );
+else :
+	wpb_header( 'navbar' );
+endif;
+?>
 			
 			<div id="content" class="clearfix row">
 			
@@ -33,7 +43,7 @@ Template Name: Full Width Page
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template(); ?>
+					<?php //comments_template(); ?>
 					
 					<?php endwhile; ?>	
 					
@@ -58,4 +68,4 @@ Template Name: Full Width Page
     
 			</div> <!-- end #content -->
 
-<?php get_footer(); ?>
+<?php wpb_footer(); ?>

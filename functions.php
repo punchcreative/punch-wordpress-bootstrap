@@ -15,12 +15,21 @@ require_once('library/bones.php');            // core functions (don't remove)
 require_once('library/shortcodes.php');
 
 // Admin Functions (commented out by default)
-// require_once('library/admin.php');         // custom admin functions
+// require_once('library/admin.php');         
+// custom admin functions
+if ( file_exists( TEMPLATEPATH . '/library/wpb/wpb-functions.php' ) ) {
+	require_once('library/wpb/wpb-functions.php');
+}
+
+if ( file_exists( TEMPLATEPATH . '/library/wpb/wpb-options.php' ) ) {
+	require_once('library/wpb/wpb-options.php');
+}
+
 
 // Custom Backend Footer
 add_filter('admin_footer_text', 'wp_bootstrap_custom_admin_footer');
 function wp_bootstrap_custom_admin_footer() {
-	echo '<span id="footer-thankyou">Developed by <a href="http://320press.com" target="_blank">320press</a></span>. Built using <a href="http://themble.com/bones" target="_blank">Bones</a>.';
+	echo '<span id="footer-thankyou">Developed by <a href="http://punchcreative.nl" target="_blank">Punch Creative</a></span>. Built using <a href="http://320press.com" target="_blank">320press</a>.';
 }
 
 // adding it to the admin area
@@ -449,6 +458,10 @@ if( !function_exists("theme_styles") ) {
         // This is the compiled css file from LESS - this means you compile the LESS file locally and put it in the appropriate directory if you want to make any changes to the master bootstrap.css.
         wp_register_style( 'bootstrap', get_template_directory_uri() . '/library/css/bootstrap.css', array(), '1.0', 'all' );
         wp_enqueue_style( 'bootstrap' );
+		
+        // Style sheet voor Punch WP Bootstrap theme.
+        wp_register_style( 'wpb', get_template_directory_uri() . '/library/wpb/css/wpb.css', array(), '1.0', 'all' );
+        wp_enqueue_style( 'wpb' );
 
         // For child themes
         wp_register_style( 'wpbs-style', get_stylesheet_directory_uri() . '/style.css', array(), '1.0', 'all' );
