@@ -35,25 +35,35 @@
 	
 	<body <?php body_class(); ?>>
 		<header role="banner">
-			<div class="container">	
-                <div class="jumbotron" style="background-image: url('<?php echo $featured_src[0]; ?>'); background-color: #FFFFFF; background-repeat: no-repeat; background-position: 0 0;">
-                	<?php
+			<div class="container">
+                <div class="page-header">
+                	<div class="row">
+					<?php
                     if ( file_exists( TEMPLATEPATH . '/library/wpb/images/logo-200.png' ) ) {
-                    	?>
-                        <div class="header-logo">
-                        	<a href="<?php echo site_url(); ?>" title="Homepage" class=""><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/logo-200.png" alt="Logo" class="img-responsive"></a>
+                        ?>
+                        <div class="col-sm-3 col-xs-11 page-header-logo">
+                            <a href="<?php echo site_url(); ?>" title="Homepage" class="home-link"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/logo-200.png" alt="Logo" class="img-responsive"></a>
+                        </div>
+                        <div class="col-lg-5 col-sm-8 col-xs-11 page-header-text">
+                            <?php
+                            $postid = get_the_ID();
+                            $headerText = get_post_meta($postid, 'headerText', true);
+                            if (isset($headerText) && $headerText != "") {
+                                echo '<p>' . $headerText . '</p>';
+                            }
+                            ?>
                         </div>
                         <?php
-					} else {
-						?>
-                        <div class="page-header">
+                    } else {
+                        ?>
+                        <div class="page-header-title">
                             <h2><?php bloginfo('title'); ?><small><?php echo get_post_meta($post->ID, 'custom_tagline' , true);?></small></h2>
                             <h3><?php echo $pagename; ?></h3>
-                    	</div>
+                        </div>
                         <?php
-					}
-					?>
-                    
+                    }
+                    ?>
+                    </div>
                 </div>
 			</div>
 		</header> <!-- end header -->

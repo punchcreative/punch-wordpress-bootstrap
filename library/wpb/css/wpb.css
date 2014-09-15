@@ -14,7 +14,33 @@ body {
   border: hidden;
 }
 .page-header {
+  font-size: 12px;
+  font-style: italic;
+  font-weight: lighter;
+  letter-spacing: 0.2em;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 4px;
+  background: url(../../../library/wpb/bkg/wit-60.png) top left repeat !important;
+}
+@media (min-width: 768px) {
+  .page-header {
+    font-size: 14px;
+    font-style: italic;
+    font-weight: lighter;
+    letter-spacing: 0.1em;
+  }
+}
+.page-header-title {
   border: none;
+}
+.page-header-logo {
+  border: none;
+  margin-bottom: 5px;
+}
+.page-header-text {
+  margin-left: 15px;
+  background: url(../../../library/wpb/bkg/paars.png) top left repeat;
 }
 .navbar {
   background: url(../../../library/wpb/bkg/wit-60.png) top left repeat !important;
@@ -27,10 +53,6 @@ body {
 }
 /* jumbotron styles
 -------------------------------------------------- */
-.jumbotron {
-  background: url(../../../library/wpb/bkg/wit-60.png) top left repeat !important;
-  margin-bottom: 10px;
-}
 /* Sticky footer styles
 -------------------------------------------------- */
 .sticky-footer {
