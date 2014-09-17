@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Full Width Page
+Template Name: Zorgcirkels links
 */
  
 if ( is_home() ) :
@@ -13,6 +13,6 @@ else :
 	wpb_header( 'navbar' );
 endif;
 
-get_template_part( 'library/wpb/templates/page', 'fw-no-sidebars' );
+get_template_part( 'library/wpb/templates/page', 'page-zc-fw-links' );
 
 wpb_footer(); ?>

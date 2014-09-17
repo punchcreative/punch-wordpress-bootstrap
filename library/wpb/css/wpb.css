@@ -5,6 +5,7 @@ html {
 }
 body {
   background: url(../../../library/wpb/images/bkg-900.png) top center no-repeat #eeeeee;
+  background-size: cover;
   padding-top: 10px;
   /* Margin bottom by footer height
     margin-bottom: 60px; */
@@ -13,7 +14,7 @@ body {
   border: none;
   border: hidden;
 }
-.page-header {
+.wpb-header {
   font-size: 12px;
   font-style: italic;
   font-weight: lighter;
@@ -21,29 +22,33 @@ body {
   color: #FFF;
   padding: 10px;
   border-radius: 4px;
-  background: url(../../../library/wpb/bkg/wit-60.png) top left repeat !important;
+  background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
 }
 @media (min-width: 768px) {
-  .page-header {
+  .wpb-header {
     font-size: 14px;
     font-style: italic;
     font-weight: lighter;
     letter-spacing: 0.1em;
   }
 }
-.page-header-title {
+.wpb-header-title,
+.wpb-header-title a {
   border: none;
+  color: #59459C;
 }
-.page-header-logo {
+.wpb-header-logo {
   border: none;
   margin-bottom: 5px;
 }
-.page-header-text {
+.wpb-header-text {
   margin-left: 15px;
   background: url(../../../library/wpb/bkg/paars.png) top left repeat;
+  border-radius: 4px;
 }
 .navbar {
-  background: url(../../../library/wpb/bkg/wit-60.png) top left repeat !important;
+  background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
+  margin-bottom: 0 !important;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
@@ -51,8 +56,41 @@ body {
   background: url(../../../library/wpb/bkg/paars-80.png) top left repeat !important;
   color: #FFFFFF;
 }
+/* aanpassen aan bootstrap css settings */
 /* jumbotron styles
 -------------------------------------------------- */
+.jumbotron {
+  margin-bottom: 3px !important;
+}
+#main article {
+  margin-bottom: 5px;
+  border: none;
+}
+#content {
+  padding-top: 0 !important;
+}
+.page-header {
+  margin-top: 3px !important;
+}
+/* 404 zoek veld */
+.zoek-404 {
+  margin: 10px 0 10px;
+}
+/* template met thumbnails in 4 kolommen */
+.thumb-4-col {
+  position: relative;
+  padding: 0px;
+  margin-bottom: 20px;
+}
+.thumb-4-col img {
+  width: 100%;
+}
+.thumb-cols {
+  padding: 8px 0 8px 0 !important;
+}
+.thumb-col-img {
+  border-radius: 4px;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 .sticky-footer {
@@ -64,12 +102,126 @@ body {
 .footer,
 .footer a {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   padding-right: 15px;
   background-color: transparent;
   border-radius: 4px;
   color: #FFFFFF;
+  font-size: 12px;
 }
 .footer {
   background: url(../../../library/wpb/bkg/paars-80.png) top left repeat !important;
+}
+/* custom buttons */
+/* Zorgcirkels basis */
+.btn-zc-basis {
+  background-color: #BA71CA;
+  border-color: #BA71CA;
+  color: #FFFFFF;
+}
+.btn-zc-basis:hover,
+.btn-zc-basis:focus,
+.btn-zc-basis:active,
+.btn-zc-basis.active {
+  background-color: #b15ec3;
+  border-color: #a84cbc;
+}
+.btn-zc-basis.disabled:hover,
+.btn-zc-basis.disabled:focus,
+.btn-zc-basis.disabled:active,
+.btn-zc-basis.disabled.active,
+.btn-zc-basis[disabled]:hover,
+.btn-zc-basis[disabled]:focus,
+.btn-zc-basis[disabled]:active,
+.btn-zc-basis[disabled].active,
+fieldset[disabled] .btn-zc-basis:hover,
+fieldset[disabled] .btn-zc-basis:focus,
+fieldset[disabled] .btn-zc-basis:active,
+fieldset[disabled] .btn-zc-basis.active {
+  background-color: #BA71CA;
+  border-color: #BA71CA;
+}
+/* Zorgcirkels COPD */
+.btn-zc-copd {
+  background-color: #EE1C25;
+  border-color: #EE1C25;
+  color: #FFFFFF;
+}
+.btn-zc-copd:hover,
+.btn-zc-copd:focus,
+.btn-zc-copd:active,
+.btn-zc-copd.active {
+  background-color: #e0111a;
+  border-color: #c80f17;
+}
+.btn-zc-copd.disabled:hover,
+.btn-zc-copd.disabled:focus,
+.btn-zc-copd.disabled:active,
+.btn-zc-copd.disabled.active,
+.btn-zc-copd[disabled]:hover,
+.btn-zc-copd[disabled]:focus,
+.btn-zc-copd[disabled]:active,
+.btn-zc-copd[disabled].active,
+fieldset[disabled] .btn-zc-copd:hover,
+fieldset[disabled] .btn-zc-copd:focus,
+fieldset[disabled] .btn-zc-copd:active,
+fieldset[disabled] .btn-zc-copd.active {
+  background-color: #EE1C25;
+  border-color: #EE1C25;
+}
+/* Zorgcirkels Diabetes */
+.btn-zc-diabetes {
+  background-color: #FFC10F;
+  border-color: #FFC10F;
+  color: #FFFFFF;
+}
+.btn-zc-diabetes:hover,
+.btn-zc-diabetes:focus,
+.btn-zc-diabetes:active,
+.btn-zc-diabetes.active {
+  background-color: #f5b500;
+  border-color: #dba200;
+}
+.btn-zc-diabetes.disabled:hover,
+.btn-zc-diabetes.disabled:focus,
+.btn-zc-diabetes.disabled:active,
+.btn-zc-diabetes.disabled.active,
+.btn-zc-diabetes[disabled]:hover,
+.btn-zc-diabetes[disabled]:focus,
+.btn-zc-diabetes[disabled]:active,
+.btn-zc-diabetes[disabled].active,
+fieldset[disabled] .btn-zc-diabetes:hover,
+fieldset[disabled] .btn-zc-diabetes:focus,
+fieldset[disabled] .btn-zc-diabetes:active,
+fieldset[disabled] .btn-zc-diabetes.active {
+  background-color: #FFC10F;
+  border-color: #FFC10F;
+}
+/* Zorgcirkels VRM */
+.btn-zc-vrm {
+  background-color: #3EB64A;
+  border-color: #3EB64A;
+  color: #FFFFFF;
+}
+.btn-zc-vrm:hover,
+.btn-zc-vrm:focus,
+.btn-zc-vrm:active,
+.btn-zc-vrm.active {
+  background-color: #38a342;
+  border-color: #31903b;
+}
+.btn-zc-vrm.disabled:hover,
+.btn-zc-vrm.disabled:focus,
+.btn-zc-vrm.disabled:active,
+.btn-zc-vrm.disabled.active,
+.btn-zc-vrm[disabled]:hover,
+.btn-zc-vrm[disabled]:focus,
+.btn-zc-vrm[disabled]:active,
+.btn-zc-vrm[disabled].active,
+fieldset[disabled] .btn-zc-vrm:hover,
+fieldset[disabled] .btn-zc-vrm:focus,
+fieldset[disabled] .btn-zc-vrm:active,
+fieldset[disabled] .btn-zc-vrm.active {
+  background-color: #3EB64A;
+  border-color: #3EB64A;
 }
