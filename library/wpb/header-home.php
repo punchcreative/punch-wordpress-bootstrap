@@ -15,7 +15,14 @@
         
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-
+        <!-- Fav and touch icons
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo BASEURL; ?>assets/ico/favicon.png">
+        <link rel="shortcut icon" href="<?php echo BASEURL; ?>assets/ico/favicon.png">
+		-->
+        
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
 		<!-- end of wordpress head -->
@@ -37,20 +44,19 @@
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<header role="banner">
-			<div class="container">
-                <div class="wpb-header">
-                	<div class="row">
+		<div class="container">
+			<header role="banner">
+                <div class="row clearfix wpb-header">
 					<?php
                     if ( file_exists( TEMPLATEPATH . '/library/wpb/images/logo-200.png' ) ) {
                         ?>
-                        <div class="col col-sm-3 col-xs-11 wpb-header-logo">
+                        <div class="col-xs-12 col-sm-3 col-md-3 wpb-header-logo">
                             <a href="<?php echo site_url(); ?>" title="Homepage" class="home-link"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/logo-200.png" alt="Logo" class="img-responsive"></a>
                         </div>
                         <?php
                     } else {
                         ?>
-                        <div class="col col-xs-12 col-md-4 wpb-header-title">
+                        <div class="col-xs-12 col-md-6 wpb-header-title">
                             <h2><a href="<?php echo site_url(); ?>" title="Homepage" class="home-link"><?php bloginfo('title'); ?></a></h2>
                             <small><?php echo $pagename; ?></small>
                         </div>
@@ -60,16 +66,15 @@
                     $headerText = get_post_meta($postid, 'headerText', true);
                     if (isset($headerText) && $headerText != "") {
                         ?>
-                        <div class="col-lg-5 col-sm-8 col-xs-11 wpb-header-text">
+                        <div class="col-xs-12 col-sm-9 col-md-6 wpb-header-text">
                         	<p><?php echo $headerText; ?></p>
                         </div>
                         <?php
                     }
                     ?>
-                    </div>
-                </div>
-			</div>
-		</header> <!-- end header -->
+                </div> <!-- end row -->
+			</header> <!-- end header -->
+		</div> <!-- end container -->
         
 		<div class="container">
         	

@@ -3,8 +3,14 @@
 // Load core variables and mixins
 // --------------------------------------------------
 
-@import "variables.less";
-@import "mixins.less";
+@import "../../less/variables.less";
+@import "../../less/mixins.less";
+
+@huisstijl-kleur-1: #583AAE;
+@huisstijl-kleur-2: #BA71CA;
+@huisstijl-kleur-3: #EE1C25;
+@huisstijl-kleur-4: #FFC10F;
+@huisstijl-kleur-5: #3EB64A;
 
 html {
 	position: relative;
@@ -15,8 +21,18 @@ body {
 	background: url(../../../library/wpb/images/bkg-900.png) top center no-repeat @gray-lighter;
 	background-size: cover;
     padding-top: 10px;
+	color: @huisstijl-kleur-1;
 	/* Margin bottom by footer height
     margin-bottom: 60px; */
+}
+
+hr {
+	color: @huisstijl-kleur-2 !important;
+	background-color: @huisstijl-kleur-2 !important;
+	height: 4px;
+	border-radius: @border-radius-small;
+	margin: 4px 15px 4px !important;
+	padding: 0;
 }
 
 .home-link {
@@ -28,13 +44,15 @@ body {
 	font-size: ceil(@font-size-base * 0.85); // ~12px;
 	font-style: italic;
 	font-weight: lighter;
-	letter-spacing: 0.2em;
+	letter-spacing: 0.1em;
 	color: #FFF;
-	padding: 10px;
+	padding: 5px;
+	margin: 0 0 3px 0;
 	border-radius: @border-radius-base;
 	background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
 }
-@media (min-width: 768px) {
+
+@media (min-width: @screen-sm-min) {
    .wpb-header {
 		font-size: @font-size-base;
 		font-style: italic;
@@ -42,6 +60,7 @@ body {
 		letter-spacing: 0.1em;
 	}
 }
+
 .wpb-header-title,
 .wpb-header-title a {
 	border: none;
@@ -54,14 +73,15 @@ body {
 }
 
 .wpb-header-text {
-	margin-left: 15px;
+	margin-left: 0;
 	background: url(../../../library/wpb/bkg/paars.png) top left repeat;
 	border-radius: @border-radius-base;
 }
 
 .navbar {	
 	background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
-	margin-bottom: 0 !important;
+	margin-bottom: 3px !important;
+	border: none !important;
 }
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
@@ -89,6 +109,52 @@ body {
 	margin-top: 3px !important;
 }
 
+.post-header {
+	background-color: @huisstijl-kleur-2;
+	border-radius: @border-radius-small;
+	border: none;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+}
+
+.post-header-title {
+	font-size: ceil(@font-size-base * 0.75);
+	color: @huisstijl-kleur-1;
+	padding-right: 10px;
+	padding-left: 30px;
+}
+
+.post_content {
+	padding: 0 15px !important;
+}
+
+.tp-zorgcirkels-2 {
+	background-color: @huisstijl-kleur-1;
+}
+.tp-copd-2 {
+	background-color: @huisstijl-kleur-3;
+}
+.tp-diabetes-2 {
+	background-color: @huisstijl-kleur-4;
+}
+.tp-vrm-2 {
+	background-color: @huisstijl-kleur-5;
+}
+.tp-links-2 {
+	background-color: @huisstijl-kleur-1;
+}
+
+.tp-zorgcirkels-4,
+.tp-copd-4,
+.tp-diabetes-4,
+.tp-vrm-4,
+.tp-links-4 {
+	background: url(../../../library/wpb/images/post-header-bkg.png) top left no-repeat;
+	border-radius: @border-radius-small;
+}
+
+
 /* 404 zoek veld */
 .zoek-404 {
 	margin: 10px 0 10px;
@@ -100,10 +166,16 @@ body {
     position: relative;
     padding: 0px;
     margin-bottom: 20px;
+	background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
 }
 
 .thumb-4-col img {
     width: 100%;
+}
+
+.thumb-4-col-caption {
+	margin: 0 2px 0 4px;
+	color: #583AAE;
 }
 
 .thumb-cols {
@@ -123,18 +195,20 @@ body {
 	height: 60px;
 }
 
-.footer,
-.footer a {
+.footer {
 	padding-top: 10px;
 	padding-bottom: 6px;
     padding-right: 15px;
+	margin-bottom: 5px;
 	background-color: transparent;
 	border-radius: @border-radius-base;
 	color: #FFFFFF;
 	font-size: @font-size-small;
+	background: url(../../../library/wpb/bkg/paars.png) top left repeat !important;
 }
-.footer {
-	background: url(../../../library/wpb/bkg/paars-80.png) top left repeat !important;
+.footer a {
+	color: #FFFFFF;
+	font-size: @font-size-small;
 }
 
 /* custom buttons */
@@ -152,6 +226,7 @@ body {
 .btn-zc-basis.active {
   background-color: #b15ec3;
   border-color: #a84cbc;
+  color: #FFFFFF;
 }
 .btn-zc-basis.disabled:hover,
 .btn-zc-basis.disabled:focus,
@@ -180,8 +255,9 @@ fieldset[disabled] .btn-zc-basis.active {
 .btn-zc-copd:focus,
 .btn-zc-copd:active,
 .btn-zc-copd.active {
-  background-color: #e0111a;
+  background-color: #A10306;
   border-color: #c80f17;
+  color: #FFFFFF;
 }
 .btn-zc-copd.disabled:hover,
 .btn-zc-copd.disabled:focus,
@@ -212,6 +288,7 @@ fieldset[disabled] .btn-zc-copd.active {
 .btn-zc-diabetes.active {
   background-color: #f5b500;
   border-color: #dba200;
+  color: #FFFFFF;
 }
 .btn-zc-diabetes.disabled:hover,
 .btn-zc-diabetes.disabled:focus,
@@ -242,6 +319,7 @@ fieldset[disabled] .btn-zc-diabetes.active {
 .btn-zc-vrm.active {
   background-color: #38a342;
   border-color: #31903b;
+  color: #FFFFFF;
 }
 .btn-zc-vrm.disabled:hover,
 .btn-zc-vrm.disabled:focus,

@@ -45,13 +45,13 @@
 					<?php
                     if ( file_exists( TEMPLATEPATH . '/library/wpb/images/logo-200.png' ) ) {
                         ?>
-                        <div class="col col-sm-3 col-xs-11 wpb-header-logo">
+                        <div class="col-xs-12 col-sm-3 col-md-3 wpb-header-logo">
                             <a href="<?php echo site_url(); ?>" title="Homepage" class="home-link"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/logo-200.png" alt="Logo" class="img-responsive"></a>
                         </div>
                         <?php
                     } else {
                         ?>
-                        <div class="col col-xs-12 col-md-4 wpb-header-title">
+                        <div class="col-xs-12 col-md-6 wpb-header-title">
                             <h2><a href="<?php echo site_url(); ?>" title="Homepage" class="home-link"><?php bloginfo('title'); ?></a></h2>
                             <small><?php echo $pagename; ?></small>
                         </div>
@@ -61,7 +61,7 @@
 					$headerText = get_post_meta($postid, 'headerText', true);
 					if (isset($headerText) && $headerText != "") {
 						?>
-						<div class="col col-lg-5 col-sm-8 col-xs-11 wpb-header-text">
+						<div class="col-xs-12 col-sm-9 col-md-6 wpb-header-text">
 						<p><?php echo $headerText; ?></p>
 						</div>
 						<?php

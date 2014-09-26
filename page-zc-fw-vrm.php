@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Zorgcirkels links
+Template Name: Zorgcirkels VRM
 */
  
 if ( is_home() ) :
@@ -13,6 +13,6 @@ else :
 	wpb_header( 'navbar' );
 endif;
 
-get_template_part( 'library/wpb/templates/page', 'zc-fw-links' );
+get_template_part( 'library/wpb/templates/page', 'zc-fw-vrm' );
 
 wpb_footer(); ?>

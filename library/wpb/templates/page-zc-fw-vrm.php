@@ -15,10 +15,10 @@
 					?>
                     <table id="post-header-collumns" width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
-                            <td class="tp-links-1" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
-                            <td class="tp-links-2" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
-                            <td class="tp-links-3" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
-                            <td class="tp-links-4"><div class="post-header-title text-right"><?php echo $pageHeaderTitel; ?></div></td>
+                            <td class="tp-vrm-1" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                            <td class="tp-vrm-2" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                            <td class="tp-vrm-3" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                            <td class="tp-vrm-4"><div class="post-header-title text-right"><?php echo $pageHeaderTitel; ?></div></td>
                         </tr>
                     </table>
                 </div>
