@@ -1,6 +1,7 @@
 <?php
 /*
-Template Name: Homepage
+Template Name: 4 kolommen Pagina
+
 */
 ?>
 

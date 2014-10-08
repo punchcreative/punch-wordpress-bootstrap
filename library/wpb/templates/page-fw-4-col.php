@@ -1,50 +1,74 @@
 <div class="content" id="thumb-navigation">
       
       <div class="row thumb-cols">
-        
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="thumb-4-col">
-            <a href="<?php echo get_site_url(); ?>/zorgcirkels" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/thumbs/zc-thumb-basis.jpg" alt="Zorgcirkels" class="thumb-col-img"></a>
-              <div class="thumb-4-col-caption">
-                <h4>Zorgcirkels</h4>
-                <p>Het doel van Zorgcirkels is gezamelijk de zorg rondom mensen met een chronische ziekte te verbeteren.Lees hier meer informatie over Zorgcirkels</p>
-              </div>
-            <a href="<?php echo get_site_url(); ?>/zorgcirkels" class="btn btn-zc-basis btn-block" role="button">ZORGCIRKELS</a>
-          </div>
-        </div>
+        <?php
+            $custom_fields = get_post_custom( get_the_ID() );
+			if (is_array($custom_fields['col-1-titel'])) {
 
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="thumb-4-col">
-            <a href="<?php echo get_site_url(); ?>/copd" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/thumbs/zc-thumb-copd.jpg" alt="Zorgcirkels COPD" class="thumb-col-img"></a>
-              <div class="thumb-4-col-caption">
-                <h4>COPD</h4>
-                <p>Er is bij u de diagnose COPD gesteld, een chronische ziekte in de longen. Hier kunt u lezen welke zorg u kunt verwachten van diverse hulpverleners.</p>
-              </div>
-            <a href="<?php echo get_site_url(); ?>/copd" class="btn btn-zc-copd btn-block" role="button">COPD</a>
-          </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="thumb-4-col">
-            <a href="<?php echo get_site_url(); ?>/diabetes" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/thumbs/zc-thumb-diabetes.jpg" alt="Zorgcirkels Diabetes" class="thumb-col-img"></a>
-              <div class="thumb-4-col-caption">
-                <h4>Diabetes</h4>
-                <p>Er is bij u de diagnose Diabetes Mellitus, suikerziekte,  vastgesteld. Hier kunt u lezen welke zorg u kunt verwachten van diverse hulpverleners.</p>
-              </div>
-            <a href="<?php echo get_site_url(); ?>/diabetes" class="btn btn-zc-diabetes btn-block" role="button">DIABETES</a>
-          </div>
-        </div>
-
-        <div class="col-xs-6 col-sm-6 col-md-3">
-          <div class="thumb-4-col">
-            <a href="<?php echo get_site_url(); ?>/vrm" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/thumbs/zc-thumb-vasc.jpg" alt="Zorgcirkels VRM" class="thumb-col-img"></a>
-              <div class="thumb-4-col-caption">
-                <h4>VRM</h4>
-                <p>Er is bij u een verhoogde kans op hart- en vaatziekten vastgesteld. Hier kunt u lezen welke zorg u kunt verwachten van diverse hulpverleners.</p>
-              </div>
-            <a href="<?php echo get_site_url(); ?>/vrm" class="btn btn-zc-vrm btn-block" role="button">VRM</a>
-          </div>
-        </div>
+				if (is_array($custom_fields['col-1-titel'])) {
+					?>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+					  <div class="thumb-4-col">
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-1-link'][0]; ?>" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_site_url(); ?><?php echo $custom_fields['col-1-afbeelding'][0]; ?>" alt="Zorgcirkels" class="thumb-col-img"></a>
+						  <div class="thumb-4-col-caption">
+							<h4><?php echo $custom_fields['col-1-titel'][0]; ?></h4>
+							<p><?php echo $custom_fields['col-1-omschrijving'][0]; ?></p>
+						  </div>
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-1-link'][0]; ?>" class="btn btn-zc-<?php echo $custom_fields['col-1-class'][0]; ?> btn-block" role="button"><?php echo strtoupper($custom_fields['col-1-titel'][0]); ?></a>
+					  </div>
+					</div>
+					<?php
+				}
+				if (is_array($custom_fields['col-2-titel'])) {
+					?>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+					  <div class="thumb-4-col">
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-2-link'][0]; ?>" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_site_url(); ?><?php echo $custom_fields['col-2-afbeelding'][0]; ?>" alt="Zorgcirkels" class="thumb-col-img"></a>
+						  <div class="thumb-4-col-caption">
+							<h4><?php echo $custom_fields['col-2-titel'][0]; ?></h4>
+							<p><?php echo $custom_fields['col-2-omschrijving'][0]; ?></p>
+						  </div>
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-2-link'][0]; ?>" class="btn btn-zc-<?php echo $custom_fields['col-2-class'][0]; ?> btn-block" role="button"><?php echo strtoupper($custom_fields['col-2-titel'][0]); ?></a>
+					  </div>
+					</div>
+					<?php
+				}
+				if (is_array($custom_fields['col-3-titel'])) {
+					?>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+					  <div class="thumb-4-col">
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-3-link'][0]; ?>" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_site_url(); ?><?php echo $custom_fields['col-3-afbeelding'][0]; ?>" alt="Zorgcirkels" class="thumb-col-img"></a>
+						  <div class="thumb-4-col-caption">
+							<h4><?php echo $custom_fields['col-3-titel'][0]; ?></h4>
+							<p><?php echo $custom_fields['col-3-omschrijving'][0]; ?></p>
+						  </div>
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-3-link'][0]; ?>" class="btn btn-zc-<?php echo $custom_fields['col-3-class'][0]; ?> btn-block" role="button"><?php echo strtoupper($custom_fields['col-3-titel'][0]); ?></a>
+					  </div>
+					</div>
+					<?php
+				}
+				if (is_array($custom_fields['col-4-titel'])) {
+					?>
+					<div class="col-xs-12 col-sm-6 col-md-3">
+					  <div class="thumb-4-col">
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-4-link'][0]; ?>" class="btn btn-block btn-4-col" role="button"><img src="<?php echo get_site_url(); ?><?php echo $custom_fields['col-4-afbeelding'][0]; ?>" alt="Zorgcirkels" class="thumb-col-img"></a>
+						  <div class="thumb-4-col-caption">
+							<h4><?php echo $custom_fields['col-4-titel'][0]; ?></h4>
+							<p><?php echo $custom_fields['col-4-omschrijving'][0]; ?></p>
+						  </div>
+						<a href="<?php echo get_site_url(); ?>/<?php echo $custom_fields['col-4-link'][0]; ?>" class="btn btn-zc-<?php echo $custom_fields['col-4-class'][0]; ?> btn-block" role="button"><?php echo strtoupper($custom_fields['col-4-titel'][0]); ?></a>
+					  </div>
+					</div>
+					<?php
+				}
+			} else {
+				?>
+                <div class="col-md-12">
+                    Kolom 1 (col-1-titel) titel is niet gedefinieerd of er zijn helemaal geen kolomen gedefinieerd bij de 'EXTRA VELDEN' optie van deze pagina!";
+                </div>
+                <?php
+			}
+			?>
         
       </div><!-- End row -->
       

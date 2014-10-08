@@ -8,24 +8,33 @@ elseif ( is_404() ) :
 else :
 	wpb_header( 'navbar' );
 endif;
-
-get_template_part( 'library/wpb/templates/page', 'search' );	
-
-wpb_footer();
-
 ?>
- 	
-<?php
-/*
+			
 			<div id="content" class="clearfix row">
 			
 				<div id="main" class="col col-lg-12 clearfix" role="main">
-				
-					<div class="page-header"><h1><span><?php _e("Search Results for","wpbootstrap"); ?>:</span> <?php echo esc_attr(get_search_query()); ?></h1></div>
+                    <header>
+                    
+                    <div class="post-header">
+                        <?php
+                        // $postid = get_the_ID();
+                        // $pageHeaderTitel = get_post_meta($postid, 'page-header-titel', true);
+                        ?>
+                        <table id="post-header-collumns" width="100%" border="0" cellpadding="0" cellspacing="0">
+                            <tr>
+                                <td class="tp-zorgcirkels-1" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                                <td class="tp-zorgcirkels-2" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                                <td class="tp-zorgcirkels-3" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
+                                <td class="tp-zorgcirkels-4"><div class="post-header-title text-right"><?php _e("Search Results for","wpbootstrap"); ?>: <?php echo esc_attr(get_search_query()); ?></div></td>
+                            </tr>
+                        </table>
+                    </div>
+                
+               		</header> <!-- end article header -->
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
-					<div class="alert alert-warning" role="alert">
+					<div class="alert alert-zorgcirkels" role="alert">
                     <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 						
 						<header>
@@ -83,6 +92,5 @@ wpb_footer();
     			<?php // get_sidebar(); // sidebar 1 ?>
     
 			</div> <!-- end #content -->
-			
-*/
-?>
+
+<?php wpb_footer(); ?>
