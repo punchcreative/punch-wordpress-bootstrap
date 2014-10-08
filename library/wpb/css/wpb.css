@@ -12,8 +12,8 @@ body {
     margin-bottom: 60px; */
 }
 hr {
-  color: #ba71ca !important;
-  background-color: #ba71ca !important;
+  color: #583aae !important;
+  background-color: #583aae !important;
   height: 4px;
   border-radius: 3px;
   margin: 4px 15px 4px !important;
@@ -64,8 +64,63 @@ hr {
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  background: url(../../../library/wpb/bkg/paars-80.png) top left repeat !important;
-  color: #FFFFFF;
+  background: #ba71ca;
+  color: #FFFFFF !important;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.zorgcirkels a:hover {
+  background: #583aae !important;
+  color: #FFFFFF !important;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.copd a:hover {
+  background: #ee1c25 !important;
+  color: #FFFFFF !important;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.diabetes a:hover {
+  background: #ffc10f !important;
+  color: #FFFFFF !important;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.vrm a:hover {
+  background: #3eb64a !important;
+  color: #FFFFFF !important;
+  -webkit-transition: background 0.4s ease-in-out;
+  -moz-transition: background 0.4s ease-in-out;
+  -o-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
+}
+.post_content a {
+  color: #ba71ca;
+  text-decoration: underline;
+}
+.post_content .lead {
+  color: #ba71ca;
+}
+.post_content.copd a,
+.post_content.copd .lead {
+  color: #ee1c25;
+}
+.post_content.diabetes a,
+.post_content.diabetes .lead {
+  color: #ffc10f;
+}
+.post_content.vrm a,
+.post_content.vrm .lead {
+  color: #3eb64a;
 }
 /* aanpassen aan bootstrap css settings */
 /* jumbotron styles
@@ -88,7 +143,7 @@ hr {
   border-radius: 3px;
   border: none;
   color: #FFFFFF;
-  margin: 0;
+  margin: 0 0 20px 0;
   padding: 0;
 }
 .post-header-title {
@@ -127,19 +182,29 @@ hr {
 .zoek-404 {
   margin: 10px 0 10px;
 }
-/* template met thumbnails in 4 kolommen */
+/* template 4 kolommen */
 .thumb-4-col {
   position: relative;
   padding: 0px;
   margin-bottom: 20px;
-  background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
+  background: url(../../../library/wpb/bkg/wit-30.png) top left repeat !important;
+}
+.thumb-4-col.hover,
+.thumb-4-col:hover {
+  background: url(../../../library/wpb/bkg/wit-70.png) top left repeat !important;
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+  cursor: pointer;
+  cursor: hand;
 }
 .thumb-4-col img {
   width: 100%;
 }
 .thumb-4-col-caption {
-  margin: 0 2px 0 4px;
-  color: #583AAE;
+  margin: 0 6px 0 8px;
+  color: #583aae;
 }
 .thumb-cols {
   padding: 8px 0 8px 0 !important;
@@ -170,20 +235,36 @@ hr {
   color: #FFFFFF;
   font-size: 12px;
 }
+/* custom alerts */
+.alert-zorgcirkels {
+  color: #583aae;
+  background-color: #e1dbf3;
+  border-color: #583aae;
+  margin: 40px 20px;
+}
 /* custom buttons */
+.btn-4-col {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
 /* Zorgcirkels basis */
 .btn-zc-basis {
-  background-color: #BA71CA;
-  border-color: #BA71CA;
+  background-color: #ba71ca;
+  border-color: #ba71ca;
   color: #FFFFFF;
 }
 .btn-zc-basis:hover,
 .btn-zc-basis:focus,
 .btn-zc-basis:active,
 .btn-zc-basis.active {
-  background-color: #b15ec3;
+  /* background-color: #b15ec3; */
+  background-color: #ffffff;
   border-color: #a84cbc;
-  color: #FFFFFF;
+  color: #ba71ca;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .btn-zc-basis.disabled:hover,
 .btn-zc-basis.disabled:focus,
@@ -197,22 +278,27 @@ fieldset[disabled] .btn-zc-basis:hover,
 fieldset[disabled] .btn-zc-basis:focus,
 fieldset[disabled] .btn-zc-basis:active,
 fieldset[disabled] .btn-zc-basis.active {
-  background-color: #BA71CA;
-  border-color: #BA71CA;
+  background-color: #ba71ca;
+  border-color: #ba71ca;
 }
 /* Zorgcirkels COPD */
 .btn-zc-copd {
-  background-color: #EE1C25;
-  border-color: #EE1C25;
+  background-color: #ee1c25;
+  border-color: #ee1c25;
   color: #FFFFFF;
 }
 .btn-zc-copd:hover,
 .btn-zc-copd:focus,
 .btn-zc-copd:active,
 .btn-zc-copd.active {
-  background-color: #A10306;
+  /* background-color: #A10306; */
+  background-color: #ffffff;
   border-color: #c80f17;
-  color: #FFFFFF;
+  color: #ee1c25;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .btn-zc-copd.disabled:hover,
 .btn-zc-copd.disabled:focus,
@@ -226,22 +312,27 @@ fieldset[disabled] .btn-zc-copd:hover,
 fieldset[disabled] .btn-zc-copd:focus,
 fieldset[disabled] .btn-zc-copd:active,
 fieldset[disabled] .btn-zc-copd.active {
-  background-color: #EE1C25;
-  border-color: #EE1C25;
+  background-color: #ee1c25;
+  border-color: #ee1c25;
 }
 /* Zorgcirkels Diabetes */
 .btn-zc-diabetes {
-  background-color: #FFC10F;
-  border-color: #FFC10F;
+  background-color: #ffc10f;
+  border-color: #ffc10f;
   color: #FFFFFF;
 }
 .btn-zc-diabetes:hover,
 .btn-zc-diabetes:focus,
 .btn-zc-diabetes:active,
 .btn-zc-diabetes.active {
-  background-color: #f5b500;
+  /* background-color: #f5b500; */
+  background-color: #ffffff;
   border-color: #dba200;
-  color: #FFFFFF;
+  color: #ffc10f;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .btn-zc-diabetes.disabled:hover,
 .btn-zc-diabetes.disabled:focus,
@@ -255,22 +346,27 @@ fieldset[disabled] .btn-zc-diabetes:hover,
 fieldset[disabled] .btn-zc-diabetes:focus,
 fieldset[disabled] .btn-zc-diabetes:active,
 fieldset[disabled] .btn-zc-diabetes.active {
-  background-color: #FFC10F;
-  border-color: #FFC10F;
+  background-color: #ffc10f;
+  border-color: #ffc10f;
 }
 /* Zorgcirkels VRM */
 .btn-zc-vrm {
-  background-color: #3EB64A;
-  border-color: #3EB64A;
+  background-color: #3eb64a;
+  border-color: #3eb64a;
   color: #FFFFFF;
 }
 .btn-zc-vrm:hover,
 .btn-zc-vrm:focus,
 .btn-zc-vrm:active,
 .btn-zc-vrm.active {
-  background-color: #38a342;
+  /* background-color: #38a342; */
+  background-color: #ffffff;
   border-color: #31903b;
-  color: #FFFFFF;
+  color: #3eb64a;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 .btn-zc-vrm.disabled:hover,
 .btn-zc-vrm.disabled:focus,
@@ -284,6 +380,16 @@ fieldset[disabled] .btn-zc-vrm:hover,
 fieldset[disabled] .btn-zc-vrm:focus,
 fieldset[disabled] .btn-zc-vrm:active,
 fieldset[disabled] .btn-zc-vrm.active {
-  background-color: #3EB64A;
-  border-color: #3EB64A;
+  background-color: #3eb64a;
+  border-color: #3eb64a;
+}
+/* effecten */
+.fade {
+  opacity: 0.6;
+  transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -webkit-transition: opacity 0.25s ease-in-out;
+}
+.fade:hover {
+  opacity: 1;
 }

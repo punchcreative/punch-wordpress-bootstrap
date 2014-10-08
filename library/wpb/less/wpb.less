@@ -6,11 +6,11 @@
 @import "../../less/variables.less";
 @import "../../less/mixins.less";
 
-@huisstijl-kleur-1: #583AAE;
-@huisstijl-kleur-2: #BA71CA;
-@huisstijl-kleur-3: #EE1C25;
-@huisstijl-kleur-4: #FFC10F;
-@huisstijl-kleur-5: #3EB64A;
+@huisstijl-kleur-1: #583AAE; // zorgcirkels paars
+@huisstijl-kleur-2: #BA71CA; // zorgcirkels roze
+@huisstijl-kleur-3: #EE1C25; // copd
+@huisstijl-kleur-4: #FFC10F; // diabetes
+@huisstijl-kleur-5: #3EB64A; // vrm
 
 html {
 	position: relative;
@@ -27,8 +27,8 @@ body {
 }
 
 hr {
-	color: @huisstijl-kleur-2 !important;
-	background-color: @huisstijl-kleur-2 !important;
+	color: @huisstijl-kleur-1 !important;
+	background-color: @huisstijl-kleur-1 !important;
 	height: 4px;
 	border-radius: @border-radius-small;
 	margin: 4px 15px 4px !important;
@@ -84,9 +84,65 @@ hr {
 	border: none !important;
 }
 
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-    background: url(../../../library/wpb/bkg/paars-80.png) top left repeat !important;
-    color: #FFFFFF;
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {  
+   background: @huisstijl-kleur-2;
+    color: #FFFFFF !important;
+	-webkit-transition: background 0.4s ease-in-out;
+	-moz-transition: background 0.4s ease-in-out;
+	-o-transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
+}
+.zorgcirkels a:hover {
+   background: @huisstijl-kleur-1 !important;
+    color: #FFFFFF !important;
+	-webkit-transition: background 0.4s ease-in-out;
+	-moz-transition: background 0.4s ease-in-out;
+	-o-transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
+}
+.copd a:hover {
+    background: @huisstijl-kleur-3 !important;
+    color: #FFFFFF !important;
+	-webkit-transition: background 0.4s ease-in-out;
+	-moz-transition: background 0.4s ease-in-out;
+	-o-transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
+}
+.diabetes a:hover {
+    background: @huisstijl-kleur-4 !important;
+    color: #FFFFFF !important;
+	-webkit-transition: background 0.4s ease-in-out;
+	-moz-transition: background 0.4s ease-in-out;
+	-o-transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
+}
+.vrm a:hover {
+    background: @huisstijl-kleur-5 !important;
+    color: #FFFFFF !important;
+	-webkit-transition: background 0.4s ease-in-out;
+	-moz-transition: background 0.4s ease-in-out;
+	-o-transition: background 0.4s ease-in-out;
+	transition: background 0.4s ease-in-out;
+}
+
+.post_content a {
+	color: @huisstijl-kleur-2;
+	text-decoration: underline;
+}
+.post_content .lead {
+	color: @huisstijl-kleur-2;
+}
+.post_content.copd a,
+.post_content.copd .lead {
+	color: @huisstijl-kleur-3;
+}
+.post_content.diabetes a,
+.post_content.diabetes .lead {
+	color: @huisstijl-kleur-4;
+}
+.post_content.vrm a,
+.post_content.vrm .lead {
+	color: @huisstijl-kleur-5;
 }
 
 /* aanpassen aan bootstrap css settings */
@@ -114,7 +170,7 @@ hr {
 	border-radius: @border-radius-small;
 	border: none;
 	color: #FFFFFF;
-	margin: 0;
+	margin: 0 0 20px 0;
 	padding: 0;
 }
 
@@ -160,13 +216,24 @@ hr {
 	margin: 10px 0 10px;
 }
 
-/* template met thumbnails in 4 kolommen */
+/* template 4 kolommen */
 
 .thumb-4-col {
     position: relative;
     padding: 0px;
     margin-bottom: 20px;
-	background: url(../../../library/wpb/bkg/wit-80.png) top left repeat !important;
+	background: url(../../../library/wpb/bkg/wit-30.png) top left repeat !important;
+}
+
+.thumb-4-col.hover,
+.thumb-4-col:hover {
+	background: url(../../../library/wpb/bkg/wit-70.png) top left repeat !important;
+	-webkit-transition: background .5s ease-in-out;
+	-moz-transition: background .5s ease-in-out;
+	-o-transition: background .5s ease-in-out;
+	transition: background .5s ease-in-out;
+	cursor: pointer;
+	cursor: hand;
 }
 
 .thumb-4-col img {
@@ -174,8 +241,8 @@ hr {
 }
 
 .thumb-4-col-caption {
-	margin: 0 2px 0 4px;
-	color: #583AAE;
+	margin: 0 6px 0 8px;
+	color: @huisstijl-kleur-1;
 }
 
 .thumb-cols {
@@ -206,27 +273,46 @@ hr {
 	font-size: @font-size-small;
 	background: url(../../../library/wpb/bkg/paars.png) top left repeat !important;
 }
+
 .footer a {
 	color: #FFFFFF;
 	font-size: @font-size-small;
 }
 
+/* custom alerts */
+
+.alert-zorgcirkels {
+	color: @huisstijl-kleur-1;
+	background-color: lighten(@huisstijl-kleur-1, 45%);
+	border-color: @huisstijl-kleur-1;
+	margin: 40px 20px;
+}
+
 /* custom buttons */
+.btn-4-col {
+	margin-top: 0 !important;
+	padding-top: 0 !important;
+}
 
 /* Zorgcirkels basis */
 
 .btn-zc-basis {
-  background-color: #BA71CA;
-  border-color: #BA71CA;
+  background-color: @huisstijl-kleur-2;
+  border-color: @huisstijl-kleur-2;
   color: #FFFFFF;
 }
 .btn-zc-basis:hover,
 .btn-zc-basis:focus,
 .btn-zc-basis:active,
 .btn-zc-basis.active {
-  background-color: #b15ec3;
+  /* background-color: #b15ec3; */
+  background-color: #ffffff;
   border-color: #a84cbc;
-  color: #FFFFFF;
+  color: @huisstijl-kleur-2;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
 }
 .btn-zc-basis.disabled:hover,
 .btn-zc-basis.disabled:focus,
@@ -240,24 +326,29 @@ fieldset[disabled] .btn-zc-basis:hover,
 fieldset[disabled] .btn-zc-basis:focus,
 fieldset[disabled] .btn-zc-basis:active,
 fieldset[disabled] .btn-zc-basis.active {
-  background-color: #BA71CA;
-  border-color: #BA71CA;
+  background-color: @huisstijl-kleur-2;
+  border-color: @huisstijl-kleur-2;
 }
 
 /* Zorgcirkels COPD */
 
 .btn-zc-copd {
-  background-color: #EE1C25;
-  border-color: #EE1C25;
+  background-color: @huisstijl-kleur-3;
+  border-color: @huisstijl-kleur-3;
   color: #FFFFFF;
 }
 .btn-zc-copd:hover,
 .btn-zc-copd:focus,
 .btn-zc-copd:active,
 .btn-zc-copd.active {
-  background-color: #A10306;
+  /* background-color: #A10306; */
+  background-color: #ffffff;
   border-color: #c80f17;
-  color: #FFFFFF;
+  color: @huisstijl-kleur-3;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
 }
 .btn-zc-copd.disabled:hover,
 .btn-zc-copd.disabled:focus,
@@ -271,24 +362,29 @@ fieldset[disabled] .btn-zc-copd:hover,
 fieldset[disabled] .btn-zc-copd:focus,
 fieldset[disabled] .btn-zc-copd:active,
 fieldset[disabled] .btn-zc-copd.active {
-  background-color: #EE1C25;
-  border-color: #EE1C25;
+  background-color: @huisstijl-kleur-3;
+  border-color: @huisstijl-kleur-3;
 }
 
 /* Zorgcirkels Diabetes */
 
 .btn-zc-diabetes {
-  background-color: #FFC10F;
-  border-color: #FFC10F;
+  background-color: @huisstijl-kleur-4;
+  border-color: @huisstijl-kleur-4;
   color: #FFFFFF;
 }
 .btn-zc-diabetes:hover,
 .btn-zc-diabetes:focus,
 .btn-zc-diabetes:active,
 .btn-zc-diabetes.active {
-  background-color: #f5b500;
+  /* background-color: #f5b500; */
+  background-color: #ffffff;
   border-color: #dba200;
-  color: #FFFFFF;
+  color: @huisstijl-kleur-4;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
 }
 .btn-zc-diabetes.disabled:hover,
 .btn-zc-diabetes.disabled:focus,
@@ -302,24 +398,29 @@ fieldset[disabled] .btn-zc-diabetes:hover,
 fieldset[disabled] .btn-zc-diabetes:focus,
 fieldset[disabled] .btn-zc-diabetes:active,
 fieldset[disabled] .btn-zc-diabetes.active {
-  background-color: #FFC10F;
-  border-color: #FFC10F;
+  background-color: @huisstijl-kleur-4;
+  border-color: @huisstijl-kleur-4;
 }
 
 /* Zorgcirkels VRM */
 
 .btn-zc-vrm {
-  background-color: #3EB64A;
-  border-color: #3EB64A;
+  background-color: @huisstijl-kleur-5;
+  border-color: @huisstijl-kleur-5;
   color: #FFFFFF;
 }
 .btn-zc-vrm:hover,
 .btn-zc-vrm:focus,
 .btn-zc-vrm:active,
 .btn-zc-vrm.active {
-  background-color: #38a342;
+  /* background-color: #38a342; */
+  background-color: #ffffff;
   border-color: #31903b;
-  color: #FFFFFF;
+  color: @huisstijl-kleur-5;
+  -webkit-transition: background-color .5s ease-in-out;
+  -moz-transition: background-color .5s ease-in-out;
+  -o-transition: background-color .5s ease-in-out;
+  transition: background-color .5s ease-in-out;
 }
 .btn-zc-vrm.disabled:hover,
 .btn-zc-vrm.disabled:focus,
@@ -333,6 +434,19 @@ fieldset[disabled] .btn-zc-vrm:hover,
 fieldset[disabled] .btn-zc-vrm:focus,
 fieldset[disabled] .btn-zc-vrm:active,
 fieldset[disabled] .btn-zc-vrm.active {
-  background-color: #3EB64A;
-  border-color: #3EB64A;
+  background-color: @huisstijl-kleur-5;
+  border-color: @huisstijl-kleur-5;
+}
+
+/* effecten */
+
+.fade {
+    opacity: 0.6;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+.fade:hover {
+     opacity: 1;
 }

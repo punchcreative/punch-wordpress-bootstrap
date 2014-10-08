@@ -25,7 +25,7 @@
             
             </header> <!-- end article header -->
         
-            <section class="post_content">
+            <section class="post_content vrm">
                 <?php the_content(); ?>
         
             </section> <!-- end article section -->

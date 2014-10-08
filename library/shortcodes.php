@@ -30,7 +30,6 @@ function gallery_shortcode_tbs($attr) {
 }
 
 
-
 // Buttons
 function buttons( $atts, $content = null ) {
 	extract( shortcode_atts( array(
