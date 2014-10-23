@@ -15,13 +15,13 @@
         
 		<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-        <!-- Fav and touch icons
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo BASEURL; ?>assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="<?php echo BASEURL; ?>assets/ico/favicon.png">
-        <link rel="shortcut icon" href="<?php echo BASEURL; ?>assets/ico/favicon.png">
-		-->
+        <!-- Fav and touch icons -->
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo BASEURL; ?>library/wpb/images/apple/apple-touch-icon-144-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo BASEURL; ?>library/wpb/images/apple/apple-touch-icon-114-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo BASEURL; ?>library/wpb/images/apple/apple-touch-icon-72-precomposed.png">
+        <link rel="apple-touch-icon-precomposed" href="<?php echo BASEURL; ?>library/wpb/images/favicon.png">
+        <link rel="shortcut icon" href="<?php echo BASEURL; ?>library/wpb/images/favicon.png">
+		
         
 		<!-- wordpress head functions -->
 		<?php wp_head(); ?>
