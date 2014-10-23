@@ -64,7 +64,16 @@
 			} else {
 				?>
                 <div class="col-md-12">
-                    Kolom 1 (col-1-titel) titel is niet gedefinieerd of er zijn helemaal geen kolomen gedefinieerd bij de 'EXTRA VELDEN' optie van deze pagina!";
+                    <p>Kolom 1 (col-1-titel) titel is niet gedefinieerd of er zijn helemaal geen kolomen gedefinieerd bij de 'EXTRA VELDEN' optie van deze pagina!</p>
+                    <p>Om kolommen te gebruiken maak je bij de optie 'Extra velden' ('Custom fields') variabelen aan met de gegevens voor elke kolom.</p>
+                    <ul class="list-group">
+  						<li class="list-group-item">col-1-titel -> Titel van het item</li>
+                        <li class="list-group-item">col-1-afbeelding -> Afbeeldings url (zonder domeinnaam url, dus geen http://mijnsite.nl)</li>
+                        <li class="list-group-item">col-1-omschrijving -> Korte tekst met betreekking tot het item</li>
+                        <li class="list-group-item">col-1-link -> de link die wordt gevolgd bij klikken op de button</li>
+                        <li class="list-group-item">col-1-class -> standaard geef je hier basis aan, maar als je css styles gebruikt voor afzonderlijke kolommen kan je hier een classnaam aangeven. (in het style sheet moet je dan een class definieren die begint met 'button-wpb-' + de class naam die je hier hebt aangegeven)</li>
+                    </ul>
+                    <p>Je kan tot 4 kolommen aanmaken, als je meer rijen van 4 kolommen wilt gebruiken moet je dat in de template aanpassen.</p>
                 </div>
                 <?php
 			}

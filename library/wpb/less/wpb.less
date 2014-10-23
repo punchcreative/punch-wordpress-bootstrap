@@ -9,7 +9,7 @@
 @huisstijl-kleur-1: #583AAE; // zorgcirkels paars
 @huisstijl-kleur-2: #BA71CA; // zorgcirkels roze
 @huisstijl-kleur-3: #EE1C25; // copd
-@huisstijl-kleur-4: #FFC10F; // diabetes
+@huisstijl-kleur-4: darken(#FFC10F, 5%); // diabetes
 @huisstijl-kleur-5: #3EB64A; // vrm
 
 html {
@@ -25,6 +25,11 @@ body {
 	/* Margin bottom by footer height
     margin-bottom: 60px; */
 }
+@media (min-width: @screen-md-min) {
+	.container {
+		padding: 0 100px !important;
+	}
+}
 
 hr {
 	color: @huisstijl-kleur-1 !important;
@@ -33,6 +38,10 @@ hr {
 	border-radius: @border-radius-small;
 	margin: 4px 15px 4px !important;
 	padding: 0;
+}
+
+p.lead {
+	text-shadow: 0 1px 1px rgba(0,0,0,.4);;
 }
 
 .home-link {
@@ -83,7 +92,9 @@ hr {
 	margin-bottom: 3px !important;
 	border: none !important;
 }
-
+.navbar a {
+	color: @huisstijl-kleur-1 !important;
+}
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {  
    background: @huisstijl-kleur-2;
     color: #FFFFFF !important;
@@ -176,37 +187,40 @@ hr {
 
 .post-header-title {
 	font-size: ceil(@font-size-base * 0.75);
-	color: @huisstijl-kleur-1;
 	padding-right: 10px;
 	padding-left: 30px;
 }
 
 .post_content {
-	padding: 0 15px !important;
+	padding: 0 35px 0 15px !important;
+}
+@media (min-width: @screen-sm-min) {
+	.post_content {
+		padding: 0 220px 0 45px !important;
+	}
+}
+.tp-zorgcirkels-row {
+	background-color: @huisstijl-kleur-1 !important;
+}
+.tp-copd-row {
+	background-color: @huisstijl-kleur-3 !important;
+}
+.tp-diabetes-row {
+	background-color: @huisstijl-kleur-4 !important;
+}
+.tp-vrm-row {
+	background-color: @huisstijl-kleur-5 !important;
+}
+.tp-links-row {
+	background-color: @huisstijl-kleur-1 !important;
 }
 
-.tp-zorgcirkels-2 {
-	background-color: @huisstijl-kleur-1;
-}
-.tp-copd-2 {
-	background-color: @huisstijl-kleur-3;
-}
-.tp-diabetes-2 {
-	background-color: @huisstijl-kleur-4;
-}
-.tp-vrm-2 {
-	background-color: @huisstijl-kleur-5;
-}
-.tp-links-2 {
-	background-color: @huisstijl-kleur-1;
-}
-
-.tp-zorgcirkels-4,
-.tp-copd-4,
-.tp-diabetes-4,
-.tp-vrm-4,
-.tp-links-4 {
-	background: url(../../../library/wpb/images/post-header-bkg.png) top left no-repeat;
+.tp-zorgcirkels-row,
+.tp-copd-row,
+.tp-diabetes-row,
+.tp-vrm-row,
+.tp-links-row {
+	/* background: url(../../../library/wpb/images/post-header-bkg.png) top left no-repeat; */
 	border-radius: @border-radius-small;
 }
 

@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){var o=document.body,n=document.documentElement;$(window).scroll(function(){o.style.backgroundPosition="center "+(0-Math.max(n.scrollTop,o.scrollTop)/2)+"px"})});

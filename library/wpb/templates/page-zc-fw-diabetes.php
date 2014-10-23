@@ -13,12 +13,19 @@
 					$postid = get_the_ID();
                     $pageHeaderTitel = get_post_meta($postid, 'page-header-titel', true);
 					?>
+                    <!--
                     <table id="post-header-collumns" width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td class="tp-diabetes-1" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
                             <td class="tp-diabetes-2" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
                             <td class="tp-diabetes-3" width="20%"><img src="<?php echo get_template_directory_uri(); ?>/library/wpb/images/spacer.gif"></td>
                             <td class="tp-diabetes-4"><div class="post-header-title text-right"><?php echo $pageHeaderTitel; ?></div></td>
+                        </tr>
+                    </table>
+                    -->
+                    <table id="post-header-row" width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td class="tp-diabetes-row" width="100%"><div class="post-header-title text-right"><?php echo $pageHeaderTitel; ?></div></td>
                         </tr>
                     </table>
                 </div>

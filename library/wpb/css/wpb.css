@@ -11,6 +11,11 @@ body {
   /* Margin bottom by footer height
     margin-bottom: 60px; */
 }
+@media (min-width: 992px) {
+  .container {
+    padding: 0 100px !important;
+  }
+}
 hr {
   color: #583aae !important;
   background-color: #583aae !important;
@@ -18,6 +23,9 @@ hr {
   border-radius: 3px;
   margin: 4px 15px 4px !important;
   padding: 0;
+}
+p.lead {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 }
 .home-link {
   border: none;
@@ -61,6 +69,9 @@ hr {
   margin-bottom: 3px !important;
   border: none !important;
 }
+.navbar a {
+  color: #583aae !important;
+}
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
@@ -88,7 +99,7 @@ hr {
   transition: background 0.4s ease-in-out;
 }
 .diabetes a:hover {
-  background: #ffc10f !important;
+  background: #f5b500 !important;
   color: #FFFFFF !important;
   -webkit-transition: background 0.4s ease-in-out;
   -moz-transition: background 0.4s ease-in-out;
@@ -116,7 +127,7 @@ hr {
 }
 .post_content.diabetes a,
 .post_content.diabetes .lead {
-  color: #ffc10f;
+  color: #f5b500;
 }
 .post_content.vrm a,
 .post_content.vrm .lead {
@@ -148,34 +159,38 @@ hr {
 }
 .post-header-title {
   font-size: 11px;
-  color: #583aae;
   padding-right: 10px;
   padding-left: 30px;
 }
 .post_content {
-  padding: 0 15px !important;
+  padding: 0 35px 0 15px !important;
 }
-.tp-zorgcirkels-2 {
-  background-color: #583aae;
+@media (min-width: 768px) {
+  .post_content {
+    padding: 0 220px 0 45px !important;
+  }
 }
-.tp-copd-2 {
-  background-color: #ee1c25;
+.tp-zorgcirkels-row {
+  background-color: #583aae !important;
 }
-.tp-diabetes-2 {
-  background-color: #ffc10f;
+.tp-copd-row {
+  background-color: #ee1c25 !important;
 }
-.tp-vrm-2 {
-  background-color: #3eb64a;
+.tp-diabetes-row {
+  background-color: #f5b500 !important;
 }
-.tp-links-2 {
-  background-color: #583aae;
+.tp-vrm-row {
+  background-color: #3eb64a !important;
 }
-.tp-zorgcirkels-4,
-.tp-copd-4,
-.tp-diabetes-4,
-.tp-vrm-4,
-.tp-links-4 {
-  background: url(../../../library/wpb/images/post-header-bkg.png) top left no-repeat;
+.tp-links-row {
+  background-color: #583aae !important;
+}
+.tp-zorgcirkels-row,
+.tp-copd-row,
+.tp-diabetes-row,
+.tp-vrm-row,
+.tp-links-row {
+  /* background: url(../../../library/wpb/images/post-header-bkg.png) top left no-repeat; */
   border-radius: 3px;
 }
 /* 404 zoek veld */
@@ -317,8 +332,8 @@ fieldset[disabled] .btn-zc-copd.active {
 }
 /* Zorgcirkels Diabetes */
 .btn-zc-diabetes {
-  background-color: #ffc10f;
-  border-color: #ffc10f;
+  background-color: #f5b500;
+  border-color: #f5b500;
   color: #FFFFFF;
 }
 .btn-zc-diabetes:hover,
@@ -328,7 +343,7 @@ fieldset[disabled] .btn-zc-copd.active {
   /* background-color: #f5b500; */
   background-color: #ffffff;
   border-color: #dba200;
-  color: #ffc10f;
+  color: #f5b500;
   -webkit-transition: background-color 0.5s ease-in-out;
   -moz-transition: background-color 0.5s ease-in-out;
   -o-transition: background-color 0.5s ease-in-out;
@@ -346,8 +361,8 @@ fieldset[disabled] .btn-zc-diabetes:hover,
 fieldset[disabled] .btn-zc-diabetes:focus,
 fieldset[disabled] .btn-zc-diabetes:active,
 fieldset[disabled] .btn-zc-diabetes.active {
-  background-color: #ffc10f;
-  border-color: #ffc10f;
+  background-color: #f5b500;
+  border-color: #f5b500;
 }
 /* Zorgcirkels VRM */
 .btn-zc-vrm {
